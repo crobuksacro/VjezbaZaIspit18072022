@@ -38,7 +38,9 @@ namespace VjezbaZaIspit.Data
                 NormalizedEmail = userName.ToUpper(),
                 EmailConfirmed = true,
                 PasswordHash = hasher.HashPassword(null, "Password12345"),
-                SecurityStamp = Guid.NewGuid().ToString("D")
+                SecurityStamp = Guid.NewGuid().ToString("D"),
+                FirstName = "Ivan",
+                LastName = "Radoš"
 
             });
 
