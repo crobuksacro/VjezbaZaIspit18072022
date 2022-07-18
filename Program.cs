@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using VjezbaZaIspit.Data;
 using VjezbaZaIspit.Models.Dbo;
+using VjezbaZaIspit.Service;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,6 +18,8 @@ builder.Services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.R
 
 
 builder.Services.AddControllersWithViews();
+builder.Services.AddScoped<IBookService, BookService>();
+
 
 var app = builder.Build();
 
