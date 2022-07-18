@@ -18,8 +18,39 @@ namespace VjezbaZaIspit.Data
             base.OnModelCreating(builder);
             string role = "admin";
             string userName = "admin@admin.com";
-            string roleId = Guid.NewGuid().ToString();
-            string userId = Guid.NewGuid().ToString();
+            string roleId = "7d7ec828-22ee-4fb3-a381-20dc59fcff5e";
+            string userId = "b15772df-590d-412f-baf3-e0a4805c13e0";
+
+
+
+            for (int i = 1; i <= 5; i++)
+            {
+                builder.Entity<Author>().HasData(new Author
+                {
+                    Id = i,
+                    FirstName = "Autor " + i,
+                    LastName = "Autor " + i,
+                    Created = DateTime.Now
+
+                });
+
+
+                if (i <= 3)
+                {
+
+
+                    builder.Entity<Publisher>().HasData(new Publisher
+                    {
+                        Id = i,
+                        Name = "Publisher " + i,
+                        Created = DateTime.Now
+
+                    });
+                }
+
+            }
+
+
 
 
             builder.Entity<IdentityRole>().HasData(new IdentityRole
@@ -38,7 +69,7 @@ namespace VjezbaZaIspit.Data
                 NormalizedEmail = userName.ToUpper(),
                 EmailConfirmed = true,
                 PasswordHash = hasher.HashPassword(null, "Password12345"),
-                SecurityStamp = Guid.NewGuid().ToString("D"),
+                SecurityStamp = "d9635ef5-e580-4a00-8fe1-9d35d0cef6d3",
                 FirstName = "Ivan",
                 LastName = "Radoš"
 

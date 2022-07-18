@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using VjezbaZaIspit.Data;
 
@@ -11,9 +12,10 @@ using VjezbaZaIspit.Data;
 namespace VjezbaZaIspit.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220718181358_init2")]
+    partial class init2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -52,7 +54,7 @@ namespace VjezbaZaIspit.Data.Migrations
                         new
                         {
                             Id = "7d7ec828-22ee-4fb3-a381-20dc59fcff5e",
-                            ConcurrencyStamp = "70cadc73-87bb-47f6-9cf7-9270dbbaabf0",
+                            ConcurrencyStamp = "45eb9175-da1d-4125-b4f7-52ac58530e42",
                             Name = "admin",
                             NormalizedName = "ADMIN"
                         });
@@ -252,7 +254,7 @@ namespace VjezbaZaIspit.Data.Migrations
                         {
                             Id = "b15772df-590d-412f-baf3-e0a4805c13e0",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "81100b65-5ea4-495d-bde8-620d05495812",
+                            ConcurrencyStamp = "ba3f4e30-08fa-474f-b42c-8e26b1160a98",
                             Email = "admin@admin.com",
                             EmailConfirmed = true,
                             FirstName = "Ivan",
@@ -260,7 +262,7 @@ namespace VjezbaZaIspit.Data.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "ADMIN@ADMIN.COM",
                             NormalizedUserName = "ADMIN@ADMIN.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEGyWusmlY2HniSL6u4GYrbq+SduxATMzhFZqp7DGVIIrRu4xjwmcr1h20YWrSQwFfA==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEH5YHJuXXt2Sa3hsdoj7HIRUdU0Ku/taEZaEusRvnXiOz7wM7sXqfzyRhL5V8cTJBQ==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "d9635ef5-e580-4a00-8fe1-9d35d0cef6d3",
                             TwoFactorEnabled = false,
@@ -295,35 +297,35 @@ namespace VjezbaZaIspit.Data.Migrations
                         new
                         {
                             Id = 1,
-                            Created = new DateTime(2022, 7, 18, 20, 17, 45, 514, DateTimeKind.Local).AddTicks(9548),
+                            Created = new DateTime(2022, 7, 18, 20, 13, 58, 501, DateTimeKind.Local).AddTicks(5861),
                             FirstName = "Autor 1",
                             LastName = "Autor 1"
                         },
                         new
                         {
                             Id = 2,
-                            Created = new DateTime(2022, 7, 18, 20, 17, 45, 514, DateTimeKind.Local).AddTicks(9612),
+                            Created = new DateTime(2022, 7, 18, 20, 13, 58, 501, DateTimeKind.Local).AddTicks(5915),
                             FirstName = "Autor 2",
                             LastName = "Autor 2"
                         },
                         new
                         {
                             Id = 3,
-                            Created = new DateTime(2022, 7, 18, 20, 17, 45, 514, DateTimeKind.Local).AddTicks(9632),
+                            Created = new DateTime(2022, 7, 18, 20, 13, 58, 501, DateTimeKind.Local).AddTicks(5925),
                             FirstName = "Autor 3",
                             LastName = "Autor 3"
                         },
                         new
                         {
                             Id = 4,
-                            Created = new DateTime(2022, 7, 18, 20, 17, 45, 514, DateTimeKind.Local).AddTicks(9651),
+                            Created = new DateTime(2022, 7, 18, 20, 13, 58, 501, DateTimeKind.Local).AddTicks(5934),
                             FirstName = "Autor 4",
                             LastName = "Autor 4"
                         },
                         new
                         {
                             Id = 5,
-                            Created = new DateTime(2022, 7, 18, 20, 17, 45, 514, DateTimeKind.Local).AddTicks(9661),
+                            Created = new DateTime(2022, 7, 18, 20, 13, 58, 501, DateTimeKind.Local).AddTicks(5945),
                             FirstName = "Autor 5",
                             LastName = "Autor 5"
                         });
@@ -383,26 +385,6 @@ namespace VjezbaZaIspit.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Publisher");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Created = new DateTime(2022, 7, 18, 20, 17, 45, 514, DateTimeKind.Local).AddTicks(9598),
-                            Name = "Publisher 1"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Created = new DateTime(2022, 7, 18, 20, 17, 45, 514, DateTimeKind.Local).AddTicks(9622),
-                            Name = "Publisher 2"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Created = new DateTime(2022, 7, 18, 20, 17, 45, 514, DateTimeKind.Local).AddTicks(9641),
-                            Name = "Publisher 3"
-                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
